@@ -1,0 +1,16 @@
+@import "../mixins";
+
+.product-quality {
+  &__list {
+    @include reset-list;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+
+    @media (max-width: $max-mobile-width) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

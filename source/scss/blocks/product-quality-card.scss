@@ -1,0 +1,80 @@
+@import "../mixins";
+@import "../variables";
+
+.product-quality-card {
+  @include transition(border-color, box-shadow, transform);
+
+  position: relative;
+
+  margin-top: 29px;
+  padding: 40px 25px 18px;
+
+  text-align: center;
+
+  background-color: $white;
+  border: 1px solid $light-gray;
+  border-radius: 8px;
+
+  &:hover {
+    box-shadow: rgba($color-primary, 0.15) 0 8px 24px;
+    border-color: $white;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &__icon {
+    @include center-child-element;
+
+    position: absolute;
+    top: -29px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 63px;
+    height: 54px;
+    margin: 0;
+
+    background-image: url("../img/product-quality-shape.svg");
+    background-repeat: no-repeat;
+
+    img {
+      max-width: 37px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 11px;
+
+    font-family: $font-secondary;
+    font-size: 25px;
+    line-height: 37px;
+    font-weight: normal;
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 24px;
+
+    color: $gray;
+  }
+
+  &__link {
+    color: $color-primary;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:focus-visible {
+      @include outline-styles;
+    }
+  }
+}
