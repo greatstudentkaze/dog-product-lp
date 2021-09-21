@@ -1,0 +1,15 @@
+@import "../variables";
+
+.page {
+  &__body {
+    margin: 0;
+
+    color: $black;
+    font-family: $font-primary;
+    font-size: 16px;
+    line-height: 1.5;
+
+    background-color: $white;
+    cursor: default;
+  }
+}
