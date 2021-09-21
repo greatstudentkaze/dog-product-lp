@@ -2,6 +2,7 @@ $white: #ffffff;
 $black: #170c04;
 $black-special: #140a03;
 $gray: rgba($black, 0.6);
+$light-gray: rgba(#000000, 0.1);
 $orange: #e27b3a;
 $light-orange: #fcf2eb;
 $blue: #2e96ff;
@@ -10,3 +11,5 @@ $color-primary: $orange;
 
 $font-primary: "Roboto", "Arial", sans-serif;
 $font-secondary: "Poppins", "Tahoma", sans-serif;
+
+$max-mobile-width: 767px;
