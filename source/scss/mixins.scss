@@ -1,5 +1,43 @@
+@import "variables";
+
 @mixin reset-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+@mixin center-child-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin outline-styles {
+  outline: 3px solid $blue;
+  outline-offset: 2px;
+}
+
+@mixin transition($properties...) {
+  $declarations: ();
+
+  @each $declaration in $properties {
+    $duration: 0.3s;
+    $delay: false;
+    $timing-function: ease-in-out;
+    $property: all;
+
+    @if type-of($declaration) == 'map' {
+      $duration: if(map_get($declaration, 'duration'), #{map_get($declaration, 'duration')}, $duration);
+      $delay: if(map_get($declaration, 'delay'), #{map_get($declaration, 'delay')}, $delay);
+      $timing-function: if(map_get($declaration, 'timing-function'), #{map_get($declaration, 'timing-function')}, $timing-function);
+      $property: if(map_get($declaration, 'property'), #{map_get($declaration, 'property')}, $property);
+    } @else {
+      $property: $declaration;
+    }
+
+    $delayValue: if($delay, ' ' + $delay, '');
+    $declarations: append($declarations, #{$property + ' ' + $duration + $delayValue + ' ' + $timing-function}, comma);
+  }
+
+  transition: $declarations;
 }
