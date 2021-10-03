@@ -11,5 +11,9 @@
 
     background-color: $white;
     cursor: default;
+
+    @media (max-width: $max-mobile-width) {
+      font-size: 14px;
+    }
   }
 }
