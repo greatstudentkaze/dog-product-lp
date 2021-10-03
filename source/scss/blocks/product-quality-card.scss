@@ -39,8 +39,14 @@
 
     font-family: $font-secondary;
     font-size: 25px;
-    line-height: 37px;
+    line-height: 1.5;
     font-weight: normal;
+
+    @media (max-width: $max-mobile-width) {
+      margin-bottom: 8px;
+
+      font-size: 20px;
+    }
   }
 
   &__description {
@@ -48,6 +54,10 @@
     margin-bottom: 24px;
 
     color: $gray;
+
+    @media (max-width: $max-mobile-width) {
+      margin-bottom: 17px;
+    }
   }
 
   &__link {
