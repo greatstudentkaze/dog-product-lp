@@ -1,0 +1,34 @@
+.product-icon {
+  $this: &;
+
+  $orange: #e9c5a5;
+  $green: #6bac50;
+  $yellow: #fdbe24;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 63px;
+  height: 54px;
+  margin: 0;
+
+  &__shape {
+    grid-area: 1/-1;
+    width: 100%;
+
+    fill: $orange;
+
+    #{$this}--yellow & {
+      fill: $yellow;
+    }
+
+    #{$this}--green & {
+      fill: $green;
+    }
+  }
+
+  &__image {
+    grid-area: 1/-1;
+    max-width: 37px;
+  }
+}

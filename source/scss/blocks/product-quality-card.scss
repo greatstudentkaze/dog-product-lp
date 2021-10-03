@@ -25,23 +25,12 @@
   }
 
   &__icon {
-    @include center-child-element;
-
     position: absolute;
     top: -29px;
     left: 50%;
     transform: translateX(-50%);
 
-    width: 63px;
-    height: 54px;
-    margin: 0;
-
-    background-image: url("../img/product-quality-shape.svg");
-    background-repeat: no-repeat;
-
-    img {
-      max-width: 37px;
-    }
+    margin: 0 auto;
   }
 
   &__title {
