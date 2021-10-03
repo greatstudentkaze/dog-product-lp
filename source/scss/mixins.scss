@@ -17,6 +17,25 @@
   outline-offset: 2px;
 }
 
+@mixin heading-styles {
+  margin: 0;
+
+  font-family: $font-secondary;
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 500;
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 26px;
+  }
+}
+
+@mixin description-styles {
+  margin: 0;
+
+  color: $gray;
+}
+
 @mixin transition($properties...) {
   $declarations: ();
 
